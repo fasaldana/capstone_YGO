@@ -9,12 +9,6 @@ const Navbar = () => {
       text: 'Home',
       className: ({ isActive }) => (isActive ? 'active' : ''),
     },
-    {
-      id: 2,
-      path: '/details',
-      className: ({ isActive }) => (isActive ? 'active missions' : 'missions'),
-      text: 'Details',
-    },
   ];
   return (
     <nav>
