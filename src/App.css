@@ -175,7 +175,7 @@ a {
   font-size: 1em;
   -webkit-background:
     #222
-    gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
   background-image:
     linear-gradient(
       -50deg,
