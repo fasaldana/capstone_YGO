@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #4e67a1;
+  background-color: #6489e1;
 }
 
 /* navbar */
@@ -88,7 +88,6 @@ a {
   background: -webkit-linear-gradient(white, #666);
   border: 1px solid #ccc;
   border-radius: 5px;
-  color: white;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
   -webkit-appearance: none;
   text-align: center;
@@ -174,9 +173,11 @@ a {
   margin: 0 1.1em;
   font-weight: bold;
   font-size: 1em;
-  background: #222
+  -webkit-background: 
+    #222
     gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
     -50deg,
     transparent 0%,
     transparent 40%,
@@ -186,11 +187,11 @@ a {
   );
   background-size: 150px;
   color: rgba(164, 155, 27, 0.3);
-  background-clip: text;
+  -webkit-background-clip: text;
   animation-name: shine;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  text-shadow: 0 0px 0px rgba(164, 155, 27, 0.5);
+  text-shadow: 0px 0px 0px rgba(164, 155, 27, 0.5);
 }
 
 .close-icon {
@@ -236,12 +237,15 @@ a {
   10% {
     background-position: -1px;
   }
+
   20% {
     background-position: top left;
   }
+
   90% {
     background-position: top right;
   }
+
   100% {
     background-position: 1px;
   }
