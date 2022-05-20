@@ -8,27 +8,23 @@ const Modal = (props) => {
   return (
     <div className={showModal}>
       <div className="modal-container">
-        <button type="button" onClick={closeModal}>
-          X
-        </button>
         <div className="modal-title">
           <h1>{name}</h1>
+          <button type="button" className="close-icon" onClick={closeModal}>
+            X
+          </button>
         </div>
         <div className="modal-body">
           <img src={img} alt="card" />
           <span>{type}</span>
-          <p>
-            Atk:
+          <span>
+            Atk:&nbsp;
             {atk}
-            Def:
+            &nbsp;&nbsp;
+            Def:&nbsp;
             {def}
-          </p>
+          </span>
           <p>{desc}</p>
-        </div>
-        <div className="modal-footer">
-          <button type="button" onClick={closeModal}>
-            Close
-          </button>
         </div>
       </div>
     </div>

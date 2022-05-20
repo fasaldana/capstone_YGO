@@ -11,7 +11,6 @@ const ArchPage = () => {
   const { value, status } = useSelector((state) => state.archetype);
   const dispatch = useDispatch();
   const [selectedType, setSelectedType] = useState('');
-  const [selectedAttrib, setSelectedAttrib] = useState('');
   useEffect(() => {
     dispatch(getCardsByArch(arch));
   }, [dispatch]);
@@ -21,26 +20,14 @@ const ArchPage = () => {
     }
     return value.data.filter((item) => item.type === selectedType);
   };
-  const getFilteredAttrib = () => {
-    if (!selectedAttrib) {
-      return value.data;
-    }
-    return value.data.filter((item) => item.attribute === selectedType);
-  };
-  const filteredList = useMemo(getFilteredTypes, [selectedType, value.data], getFilteredAttrib, [
-    selectedAttrib,
-    value.data,
-  ]);
+  const filteredList = useMemo(getFilteredTypes, [selectedType, value.data]);
   const handleTypeChange = (e) => {
     setSelectedType(e.target.value);
   };
-  const handleAttribChange = (e) => {
-    setSelectedAttrib(e.target.value);
-  };
   return (
-    <div className="card-container">
+    <div className="list-container">
       <div className="filter-container">
-        <h3>Filter by type:</h3>
+        <h4>Filter by type:</h4>
         <div>
           <select name="type-list" id="category-llist" onChange={handleTypeChange}>
             {filterList.filterType.map((item) => (
@@ -51,23 +38,11 @@ const ArchPage = () => {
           </select>
         </div>
       </div>
-      <div className="filter-container">
-        <h3>Filter by Atribute:</h3>
-        <div>
-          <select name="type-list" id="category-llist" onChange={handleAttribChange}>
-            {filterList.filterAtr.map((item) => (
-              <option key={item.id} value={item.value}>
-                {item.typeName}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
       <h3>Click on a card to see description</h3>
-      {status === 'success' ? (
-        filteredList.map((card) => (
-          <div key={card.id}>
-            <li>
+      <div className="card-list">
+        {status === 'success' ? (
+          filteredList.map((card) => (
+            <li className="card-item" key={card.id}>
               <CardList
                 name={card.name}
                 img={card.card_images[0].image_url_small}
@@ -77,11 +52,11 @@ const ArchPage = () => {
                 def={card.def}
               />
             </li>
-          </div>
-        ))
-      ) : (
-        <span>loading</span>
-      )}
+          ))
+        ) : (
+          <span>loading</span>
+        )}
+      </div>
     </div>
   );
 };

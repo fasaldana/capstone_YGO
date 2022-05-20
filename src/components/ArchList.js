@@ -10,7 +10,7 @@ const ArchList = (props) => {
   return (
     <div className="card-container">
       <h2>
-        Archetype:
+        Archetype:&nbsp;
         {archetype}
       </h2>
       <button type="button" onClick={() => handleClick(archetype)} className="card-info">
