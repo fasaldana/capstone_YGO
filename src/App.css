@@ -173,7 +173,7 @@ a {
   margin: 0 1.1em;
   font-weight: bold;
   font-size: 1em;
-  background:
+  -webkit-background:
     #222
     gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
   background-image:
