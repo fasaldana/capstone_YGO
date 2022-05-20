@@ -6,6 +6,141 @@
   list-style: none;
 }
 
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #4e67a1;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  padding: 0.7rem 0;
+  background-color: #1e3664;
+  color: #fff;
+}
+
+.nav-options {
+  display: flex;
+  width: 3em;
+  justify-content: space-between;
+}
+
+i {
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  padding: 0 15px;
+}
+
+.head-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 0 0;
+  color: #ccc;
+}
+
+.head-title h4 {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e3664;
+  margin-top: 10px;
+  font-size: 1.3em;
+  height: 3em;
+}
+
+/* Filter */
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+  gap: 10px;
+  color: #ccc;
+  font-size: 1.7em;
+}
+
+.list-container h3 {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e3664;
+  margin-top: 10px;
+  font-size: 1.3em;
+  height: 3em;
+  color: #ccc;
+}
+
+#category-llist {
+  background: -webkit-linear-gradient(white, #666);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  -webkit-appearance: none;
+  text-align: center;
+  width: 20em;
+  height: 2em;
+  color: black;
+  font-size: 0.6em;
+}
+
+#category-list option {
+  text-align: center;
+}
+
+/* arch list */
+
+.arch-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* card list */
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.card-container h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.card-item:nth-child(4n + 2),
+.card-item:nth-child(4n + 3) {
+  background-color: #2b4371;
+}
+
+.card-item:nth-child(4n + 4),
+.card-item:nth-child(4n + 1) {
+  background-color: #424db4;
+}
+
 /* modal */
 
 .modal {
@@ -14,17 +149,78 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .modal-container {
   position: fixed;
-  background: white;
+  display: flex;
+  flex-direction: column;
+  background: rgb(38, 50, 163);
   width: 80%;
   height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  gap: 20px;
+  color: #fff;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 0 1.1em;
+  font-weight: bold;
+  font-size: 1em;
+  background: #222
+    gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+  background-image: linear-gradient(
+    -50deg,
+    transparent 0%,
+    transparent 40%,
+    #fff 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 150px;
+  color: rgba(164, 155, 27, 0.3);
+  background-clip: text;
+  animation-name: shine;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0px 0px rgba(164, 155, 27, 0.5);
+}
+
+.close-icon {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-body img {
+  max-width: 50%;
+  align-self: center;
+}
+
+.modal-body p {
+  font-size: 22px;
+  margin: 0 1em;
+  margin-bottom: 10px;
+}
+
+.modal-body span {
+  font-size: 20px;
+  margin: 0 1em;
 }
 
 .show {
@@ -33,4 +229,20 @@
 
 .hide {
   display: none;
+}
+
+@keyframes shine {
+  0%,
+  10% {
+    background-position: -1px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1px;
+  }
 }

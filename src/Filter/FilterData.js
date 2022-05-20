@@ -3,7 +3,7 @@ const filterList = {
     {
       id: 1,
       value: '',
-      typeName: 'all',
+      typeName: 'All',
     },
     {
       id: 2,
@@ -50,7 +50,7 @@ const filterList = {
     {
       id: 1,
       value: '',
-      typeName: 'all',
+      typeName: 'All',
     },
     {
       id: 2,
