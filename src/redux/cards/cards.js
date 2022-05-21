@@ -21,7 +21,12 @@ export const cardSlice = createSlice({
     },
     [getCardsData.fulfilled]: (state, action) => {
       state.status = 'success';
-      state.value = action.payload;
+      state.value = action.payload.data.map((cards) => ({
+        id: cards.id,
+        name: cards.name,
+        img: cards.card_images[0].image_url_small,
+        arch: cards.archetype,
+      }));
     },
   },
 });
