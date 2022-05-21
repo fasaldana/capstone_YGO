@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-Coming Soon
+See a live version [here](https://ygo-pro.herokuapp.com/)
 
 
 ## Getting Started
@@ -42,6 +42,8 @@ Give a ⭐️ if you like this project!
 
 The inspiration for this project came from my course curriculum at Microverse.
 The study of JavaScript, React, Webpack usage, Axios, and API usage made this a perfect project for practice.
+
+Original design idea by [Nelson Sakwa  on Behance.](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 License
 
