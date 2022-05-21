@@ -11,9 +11,9 @@ const Home = () => {
       </div>
       <ul className="arch-container">
         {status === 'success' ? (
-          value.data.map((card) => (
+          value.map((card) => (
             <li className="card-item" key={card.id}>
-              <ArchList archetype={card.archetype} img={card.card_images[0].image_url_small} />
+              <ArchList archetype={card.arch} img={card.img} />
             </li>
           ))
         ) : (
