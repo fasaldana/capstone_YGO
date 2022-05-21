@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if Navbar renders correctly 1`] = `
+<nav>
+  <i
+    className="fa-solid fa-angle-left"
+  >
+    <a
+      aria-current="page"
+      className="active"
+      href="/"
+      onClick={[Function]}
+    />
+  </i>
+  <ul
+    className="title"
+  >
+    <li>
+      Yu Gi Oh!
+    </li>
+  </ul>
+  <div
+    className="nav-options"
+  >
+    <i
+      className="fa-solid fa-microphone"
+    />
+    <i
+      className="fa-solid fa-gear"
+    />
+  </div>
+</nav>
+`;
