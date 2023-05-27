@@ -24,12 +24,6 @@ nav {
   color: #fff;
 }
 
-.nav-options {
-  display: flex;
-  width: 3em;
-  justify-content: space-between;
-}
-
 i {
   font-size: 20px;
 }

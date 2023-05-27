@@ -1,21 +1,19 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
-const Navbar = () => (
-  <nav>
-    <i className="fa-solid fa-angle-left">
-      <NavLink to="/" />
-    </i>
-    <ul className="title">
-      <li>
-        Yu Gi Oh!
-      </li>
-    </ul>
-    <div className="nav-options">
-      <i className="fa-solid fa-microphone" />
-      <i className="fa-solid fa-gear" />
-    </div>
-  </nav>
-);
+const Navbar = () => {
+  const location = useLocation();
+
+  return (
+    <nav>
+      {location.pathname === '/' ? null : <NavLink to="/"><i className="fa-solid fa-angle-left" /></NavLink>}
+      <ul className="title">
+        <li>
+          Yu Gi Oh!
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;
