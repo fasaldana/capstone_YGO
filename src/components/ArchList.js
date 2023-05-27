@@ -5,7 +5,7 @@ const ArchList = (props) => {
   const { archetype, img } = props;
   const navigate = useNavigate();
   const handleClick = (arch) => {
-    navigate(`/cards:${arch}`);
+    navigate(`/cards/${arch}`);
   };
   return (
     <div className="card-container">

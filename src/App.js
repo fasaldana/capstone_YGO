@@ -12,7 +12,7 @@ export default function App() {
       </header>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/cards:arch" element={<ArchPage />} />
+        <Route path="/cards/:arch" element={<ArchPage />} />
       </Routes>
     </div>
   );
